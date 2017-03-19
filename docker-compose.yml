@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  worker:
+    build: worker
+    environment:
+      - PATAVI_BROKER_HOST
+  opencpu:
+    image: opencpu/base
