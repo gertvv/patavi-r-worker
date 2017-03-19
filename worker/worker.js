@@ -6,10 +6,11 @@ var service = 'opencpu';
 
 function handleRequest(ch) {
   return function(msg) {
+    console.log("Request received", msg);
     var str = msg.content.toString();
     var taskId = msg.properties.correlationId;
     var replyTo = msg.properties.replyTo;
-    ch.publish('', replyTo, new Buffer(JSON.stringify({ "message": "Hello world"})), { contentType: 'application/json' });
+    ch.publish('', replyTo, new Buffer(JSON.stringify({ "message": "Hello world"})), { contentType: 'application/json', correlationId: taskId });
     ch.ack(msg);
   };
 }
