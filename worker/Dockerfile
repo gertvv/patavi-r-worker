@@ -19,7 +19,7 @@ USER patavi
 WORKDIR /var/lib/patavi
 ENV HOME /var/lib/patavi
 
-COPY ./* /var/lib/patavi
+COPY ./* /var/lib/patavi/
 
 RUN npm install --production
 
