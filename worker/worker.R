@@ -2,6 +2,7 @@ library(httr)
 library(jsonlite)
 
 cat("Running test.R")
+setwd(tempdir())
 
 res <- POST("http://localhost:8000/update", body=list(progress=20), encode="json")
 stopifnot(res$status_code == 200)
