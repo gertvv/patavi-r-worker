@@ -79,6 +79,7 @@ server.listen(8000);
 const exec = require('child_process').exec;
 
 const child = exec("R --vanilla --slave -f worker.R", { timeout: 60 * 1000 }, function(error, stdout, stderr) {
-//  console.log(stdout);
+  console.log(stderr);
   server.close();
 });
+process.stdin.pipe(child.stdin);
