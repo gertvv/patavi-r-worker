@@ -1,5 +1,5 @@
 {
-  "name": "patavi-opencpu-worker",
+  "name": "patavi-r-worker",
   "version": "0.0.1",
   "description": "Patavi worker based on OpenCPU",
   "main": "worker.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gert van Valkenhoef",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "amqplib": "^0.5.1",
     "async": "^2.1.5",
