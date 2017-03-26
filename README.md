@@ -9,4 +9,4 @@ Running
 First, run `npm install` from the root directory. Then the following options are available:
 
  - `node worker` runs the Patavi worker. You must define the `PATAVI_BROKER_HOST` environment variable as a RabbitMQ connection string that includes credentials.
- - `node worker-cli` runs the worker without the dependency on Patavi. The workere will read input from standard in, show progress on standard out, and print the location of a temporary directory where results have been saved.
+ - `node worker-cli` runs the worker without the dependency on Patavi. The worker will read input from standard in, show progress on standard out, and print the location of a temporary directory where results have been saved.
